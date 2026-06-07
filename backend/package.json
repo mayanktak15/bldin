@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc && npx playwright install chromium",
+    "build": "tsc",
     "start": "node dist/server.js"
   },
   "dependencies": {
