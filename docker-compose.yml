@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: remote-browser-backend
+    ports:
+      - "5000:5000"
+    ipc: host # Crucial for Playwright/Chromium to prevent shared memory crashes
+    environment:
+      - PORT=5000
+      - NODE_ENV=development
+    restart: unless-stopped
