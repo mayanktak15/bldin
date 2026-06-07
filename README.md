@@ -40,27 +40,22 @@ graph TD
 ## Setup & Installation
 
 ### Option A: Running via Docker (Recommended)
-This approach encapsulates the browser and its dependencies inside a Docker container using the official Playwright base image. No browser installations are required on your host machine.
+This approach encapsulates both the Next.js frontend and the Node.js Playwright backend inside Docker containers. **No local installations of Node.js, npm, or Playwright are required on your host machine.**
 
-1. **Start the backend server**:
+1. **Start the application**:
    ```bash
    # From the project root (where docker-compose.yml is located)
    docker compose up --build
    ```
-   The backend server will launch and listen on `http://localhost:5000`.
 
-2. **Start the frontend client**:
-   In a separate terminal tab at the root of the project:
-   ```bash
-   npm install
-   npm run dev
-   ```
-   Open `http://localhost:3000` in your web browser.
+2. **Access the application**:
+   - Open **`http://localhost:3000`** in your browser to interact with the frontend.
+   - The backend service automatically starts on **`http://localhost:5000`** and is bridged to the frontend.
 
 ---
 
 ### Option B: Running Locally (Host Fallback)
-If you do not have Docker installed, the application is designed to fall back to running on your host machine.
+If you do not have Docker installed, you can fall back to running the services directly on your host machine. This requires Node.js (v18+) and npm to be installed.
 
 1. **Start the backend server**:
    ```bash
@@ -123,7 +118,7 @@ If you do not have Docker installed, the application is designed to fall back to
 ## Screen Recording Demonstration Checklist
 
 Use this list as a guide for your submission video:
-- [ ] **Step 1**: Start the docker container (`docker compose up`) and the frontend app (`npm run dev`).
+- [ ] **Step 1**: Start the Docker containers (`docker compose up --build`).
 - [ ] **Step 2**: Open `http://localhost:3000` and verify the server status is **Connected** (emerald dot).
 - [ ] **Step 3**: Click **Start Browser** (defaults to Google). Verify the chromium instance launches and frames stream back.
 - [ ] **Step 4**: Click on the search input box, type `"BLD teambld.in"` and press `Enter`.
