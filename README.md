@@ -1,4 +1,4 @@
-# Antigravity Remote Browser Control System
+# BLD — SDE Intern Assignment: Remote Browser Control System
 
 A high-performance, real-time remote browser control system (mini TeamViewer for a browser) built for the BLD SDE Intern Assignment. It enables starting a containerized Chromium browser locally, streaming its screen back to a web interface in real time, and fully interacting with it (clicks, typing, scrolling, history navigation).
 
