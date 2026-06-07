@@ -5,9 +5,9 @@ node_modules/
 
 # Production / Build directories
 /backend/dist/
-/frontend/.next/
-/frontend/out/
-/frontend/build/
+.next/
+out/
+build/
 
 # Logs
 *.log

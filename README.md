@@ -50,9 +50,8 @@ This approach encapsulates the browser and its dependencies inside a Docker cont
    The backend server will launch and listen on `http://localhost:5000`.
 
 2. **Start the frontend client**:
-   In a separate terminal tab:
+   In a separate terminal tab at the root of the project:
    ```bash
-   cd frontend
    npm install
    npm run dev
    ```
@@ -74,9 +73,8 @@ If you do not have Docker installed, the application is designed to fall back to
    The backend will run on `http://localhost:5000`.
 
 2. **Start the frontend client**:
-   In another terminal tab:
+   In another terminal tab at the root of the project:
    ```bash
-   cd frontend
    npm install
    npm run dev
    ```
